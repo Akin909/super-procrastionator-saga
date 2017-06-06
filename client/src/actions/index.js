@@ -8,7 +8,14 @@ export function fetchArticles() {
 
 export function receiveArticles() {
   return {
-    type: c.RECEIVE_ARTICLES,
+    type: c.ARTICLES_FETCH_SUCCESS,
     payload: articles
+  };
+}
+
+export function saveArticle(article) {
+  return {
+    type: c.SAVE_ARTICLE,
+    article
   };
 }
