@@ -9,6 +9,7 @@ import rootSaga from './../sagas';
 import rootReducer from './../reducers';
 import News from './News.jsx';
 import NavBar from './NavBar.jsx';
+import Saved from './Saved.jsx';
 import './reset.js';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -25,12 +26,15 @@ const AppWrapper = styled.div`
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <AppWrapper>
-          <NavBar />
-          <News />
-        </AppWrapper>
-      </Provider>
+      <Router>
+        <Provider store={store}>
+          <AppWrapper>
+            <NavBar />
+            <Route exact path="/" component={News} />
+            <Route path="/saved" component={Saved} />
+          </AppWrapper>
+        </Provider>
+      </Router>
     );
   }
 }
