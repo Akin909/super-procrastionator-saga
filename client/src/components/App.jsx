@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createSagaMiddleware from 'redux-saga';
 import styled from 'styled-components';
-import './reset.js';
 
 import rootSaga from './../sagas';
 import rootReducer from './../reducers';
 import News from './News.jsx';
 import NavBar from './NavBar.jsx';
+import './reset.js';
 
 const sagaMiddleware = createSagaMiddleware();
 

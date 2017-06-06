@@ -38,6 +38,8 @@ class NavBar extends Component {
       <Nav>
         <Logo>Super Procrastinator</Logo>
         <FavouriteLinks>
+          <FavLink>Javascript</FavLink>
+          <FavLink>Vim</FavLink>
           <FavLink>Saved</FavLink>
         </FavouriteLinks>
       </Nav>
