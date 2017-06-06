@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { StyledLink } from './styled';
 
 const centering = css`
   display: flex;
@@ -23,9 +23,8 @@ const FavouriteLinks = styled.section`
   ${centering}
   justify-self: flex-end;
 `;
-const FavLink = styled(Link)`
-  list-style-type: none;
-`;
+//const FavLink = styled(StyledLink)`
+//`;
 
 const Logo = styled.h2`
   color: white;
@@ -39,9 +38,9 @@ class NavBar extends Component {
       <Nav>
         <Logo>Super Procrastinator</Logo>
         <FavouriteLinks>
-          <FavLink to="/">Javascript</FavLink>
-          <FavLink to="/">Vim</FavLink>
-          <FavLink to="/saved">Saved</FavLink>
+          <StyledLink to="/">Javascript</StyledLink>
+          <StyledLink to="/">Vim</StyledLink>
+          <StyledLink to="/saved">Saved</StyledLink>
         </FavouriteLinks>
       </Nav>
     );

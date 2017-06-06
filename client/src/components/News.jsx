@@ -9,14 +9,9 @@ import {
   Card,
   CardTitle,
   CardAuthor,
-  CardDetails
+  CardDetails,
+  SaveButton
 } from './styled';
-
-const SaveButton = styled.button`
-  width: 6em;
-  height: 3em;
-  margin: 0 0 1em 0;
-`;
 
 class News extends Component {
   componentDidMount() {
@@ -24,10 +19,11 @@ class News extends Component {
     dispatch(fetchArticles());
   }
 
+
   saveOffline(article) {
     const { dispatch } = this.props;
     localStorage.setItem(article.title, JSON.stringify(article));
-    dispatch(saveArticle(article.title));
+    dispatch(saveArticle(article));
   }
 
   render() {
@@ -44,7 +40,7 @@ class News extends Component {
                   Read The Full Story
                 </ArticleLink>
                 <SaveButton onClick={() => this.saveOffline(article)}>
-                  {this.props.saved.some(saved => saved === article.title)
+                  {this.props.saved.some(saved => saved.title === article.title)
                     ? 'Saved'
                     : 'Save'}
                 </SaveButton>
