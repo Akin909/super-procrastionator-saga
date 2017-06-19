@@ -6,6 +6,12 @@ export function fetchArticles() {
   };
 }
 
+export function getScrapings() {
+  return {
+    type: c.GET_SCRAPINGS
+  };
+}
+
 export function receiveArticles() {
   return {
     type: c.ARTICLES_FETCH_SUCCESS,

@@ -12,6 +12,16 @@ export function articles(state = [], action) {
   }
 }
 
+export function scrapings(state = [], action) {
+  switch (action.type) {
+    case c.SCRAPE_FAILURE:
+    case c.SCRAPE_SUCCESS:
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+}
+
 export function saved(state = [], action) {
   switch (action.type) {
     case c.SAVE_ARTICLE:
@@ -22,6 +32,7 @@ export function saved(state = [], action) {
 }
 
 export default combineReducers({
+  scrapings,
   articles,
   saved
 });

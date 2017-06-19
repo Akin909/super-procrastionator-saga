@@ -10,6 +10,7 @@ import rootReducer from './../reducers';
 import News from './News.jsx';
 import NavBar from './NavBar.jsx';
 import Saved from './Saved.jsx';
+import Scrapings from './Scrapings.jsx';
 import './reset.js';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -32,6 +33,7 @@ class App extends Component {
             <NavBar />
             <Route exact path="/" component={News} />
             <Route path="/saved" component={Saved} />
+            <Route path="/scrapings" component={Scrapings} />
           </AppWrapper>
         </Provider>
       </Router>

@@ -23,8 +23,6 @@ const FavouriteLinks = styled.section`
   ${centering}
   justify-self: flex-end;
 `;
-//const FavLink = styled(StyledLink)`
-//`;
 
 const Logo = styled.h2`
   color: white;
@@ -38,7 +36,7 @@ class NavBar extends Component {
       <Nav>
         <Logo>Super Procrastinator</Logo>
         <FavouriteLinks>
-          <StyledLink to="/">Javascript</StyledLink>
+          <StyledLink to="/Scrapings">Jobs and News</StyledLink>
           <StyledLink to="/">Vim</StyledLink>
           <StyledLink to="/saved">Saved</StyledLink>
         </FavouriteLinks>
